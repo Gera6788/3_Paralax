@@ -254,19 +254,19 @@ void ExampleWindow::do_logic()
 		if (_road1_x <= -width())
 			_road1_x = 1900;
 
-	_stolbiki_rect21_x -= 6;
+	_stolbiki_rect21_x -= 4;
 		if (_stolbiki_rect21_x <= 0)
 			_stolbiki_rect21_x = 1700;
-	_stolbiki_rect22_x -= 6;
+	_stolbiki_rect22_x -= 4;
 		if (_stolbiki_rect22_x <= 0)
 			_stolbiki_rect22_x = 1700;
-	_stolbiki_rect23_x -= 6;
+	_stolbiki_rect23_x -= 4;
 		if (_stolbiki_rect23_x <= 0)
 			_stolbiki_rect23_x = 1700;
-	_stolbiki_rect24_x -= 6;
+	_stolbiki_rect24_x -= 4;
 		if (_stolbiki_rect24_x <= 0)
 			_stolbiki_rect24_x = 1700;
-	_stolbiki_rect25_x -= 6;
+	_stolbiki_rect25_x -= 4;
 		if (_stolbiki_rect25_x <= 0)
 			_stolbiki_rect25_x = 1700;
 
@@ -276,7 +276,7 @@ void ExampleWindow::do_logic()
 	_flower_x -= 5;
 		if (_flower_x <= -width())
 			_flower_x = 2000;
-	_sign_x -= 5;
+	_sign_x -= 4;
 		if (_sign_x <= -width())
 			_sign_x = 2000;
 
