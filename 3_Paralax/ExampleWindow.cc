@@ -12,7 +12,7 @@ ExampleWindow::ExampleWindow(int width, int height)
   _stolbiki_rect11_x(200),_stolbiki_rect12_x(510),_stolbiki_rect13_x(850),_stolbiki_rect14_x(1170),_stolbiki_rect15_x(1500),
   _stolbiki_rect21_x(200),_stolbiki_rect22_x(510),_stolbiki_rect23_x(850),_stolbiki_rect24_x(1170),_stolbiki_rect25_x(1500),
   _woods_x(750),_woods_y(340),_bush_x(2600),_bush_y(500),_flower_x(870), _flower_y(740),
-  _sign_x(2700), _sign_y(670),_plane_x(200), _plane_y(150)
+  _sign_x(2700), _sign_y(650),_plane_x(200), _plane_y(150)
 
 {
 	_skying = std::shared_ptr<SDL_Texture>(
@@ -173,10 +173,10 @@ void ExampleWindow::render()
 	SDL_Rect plane_rect { _plane_x, _plane_y, 200, 200 };
 
 	SDL_RenderCopy(_renderer.get(), _skying.get(), nullptr, &sky_rect);
+	SDL_RenderCopy(_renderer.get(), _sun.get(), nullptr, &sun_rect);
 	SDL_RenderCopy(_renderer.get(), _cloud2.get(), nullptr, &cloud2_rect);
 	SDL_RenderCopy(_renderer.get(), _cloud1.get(), nullptr, &cloud1_rect);
 	SDL_RenderCopy(_renderer.get(), _cloud3.get(), nullptr, &cloud3_rect);
-	SDL_RenderCopy(_renderer.get(), _sun.get(), nullptr, &sun_rect);
 	SDL_RenderCopy(_renderer.get(), _field.get(), nullptr, &field_rect);
 	SDL_RenderCopy(_renderer.get(), _field1.get(), nullptr, &field1_rect);
 		SDL_RenderCopy(_renderer.get(), _mounts.get(), nullptr, &mounts_rect);
@@ -207,10 +207,10 @@ void ExampleWindow::do_logic()
 		if (_sun_x <= 0)
 			_sun_x = 1900;
 
-	_mounts_x -= 2;
+	_mounts_x -= 1;
 		if (_mounts_x <= -width())
 			_mounts_x = 1900;
-	_mounts_x1 -= 2;
+	_mounts_x1 -= 1;
 		if (_mounts_x1 <= -width())
 			_mounts_x1 = 1900;
 
@@ -244,46 +244,46 @@ void ExampleWindow::do_logic()
 		if (_stolbiki_rect15_x <= 0)
 			_stolbiki_rect15_x = 1700;
 
-	_car_x += 6;
+	_car_x += 1;
 		if (_car_x >= width())
 			_car_x = -256;
-	_road_x -= 4;
+	_road_x -= 5;
 		if (_road_x <= -width())
 			_road_x = 1900;
-	_road1_x -= 4;
+	_road1_x -= 5;
 		if (_road1_x <= -width())
 			_road1_x = 1900;
 
-	_stolbiki_rect21_x -= 4;
+	_stolbiki_rect21_x -= 6;
 		if (_stolbiki_rect21_x <= 0)
 			_stolbiki_rect21_x = 1700;
-	_stolbiki_rect22_x -= 4;
+	_stolbiki_rect22_x -= 6;
 		if (_stolbiki_rect22_x <= 0)
 			_stolbiki_rect22_x = 1700;
-	_stolbiki_rect23_x -= 4;
+	_stolbiki_rect23_x -= 6;
 		if (_stolbiki_rect23_x <= 0)
 			_stolbiki_rect23_x = 1700;
-	_stolbiki_rect24_x -= 4;
+	_stolbiki_rect24_x -= 6;
 		if (_stolbiki_rect24_x <= 0)
 			_stolbiki_rect24_x = 1700;
-	_stolbiki_rect25_x -= 4;
+	_stolbiki_rect25_x -= 6;
 		if (_stolbiki_rect25_x <= 0)
 			_stolbiki_rect25_x = 1700;
 
 	_bush_x -= 3;
 		if (_bush_x <= -width())
 			_bush_x = 2000;
-	_flower_x -= 5;
+	_flower_x -= 7;
 		if (_flower_x <= -width())
 			_flower_x = 2000;
-	_sign_x -= 4;
+	_sign_x -= 7;
 		if (_sign_x <= -width())
 			_sign_x = 2000;
 
-	_field_x -= 3;
+	_field_x -= 8;
 		if (_field_x <= -width())
 			_field_x = 1900;
-	_field1_x -= 3;
+	_field1_x -= 8;
 		if (_field1_x <= -width())
 			_field1_x = 1900;
 }
