@@ -244,13 +244,13 @@ void ExampleWindow::do_logic()
 		if (_stolbiki_rect15_x <= 0)
 			_stolbiki_rect15_x = 1700;
 
-	_car_x += 1;
+	_car_x += 6;
 		if (_car_x >= width())
 			_car_x = -256;
-	_road_x -= 5;
+	_road_x -= 4;
 		if (_road_x <= -width())
 			_road_x = 1900;
-	_road1_x -= 5;
+	_road1_x -= 4;
 		if (_road1_x <= -width())
 			_road1_x = 1900;
 
@@ -270,13 +270,13 @@ void ExampleWindow::do_logic()
 		if (_stolbiki_rect25_x <= 0)
 			_stolbiki_rect25_x = 1700;
 
-	_bush_x -= 7;
+	_bush_x -= 3;
 		if (_bush_x <= -width())
 			_bush_x = 2000;
-	_flower_x -= 7;
+	_flower_x -= 5;
 		if (_flower_x <= -width())
 			_flower_x = 2000;
-	_sign_x -= 7;
+	_sign_x -= 5;
 		if (_sign_x <= -width())
 			_sign_x = 2000;
 
